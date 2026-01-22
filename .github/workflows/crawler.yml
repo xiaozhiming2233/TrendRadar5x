@@ -36,12 +36,11 @@ on:
     #   "30 0-14 * * *"  → 北京时间 8:00-22:00 每小时第30分钟 / Beijing 8am-10pm
     #
     - cron: "0 1 * * *"
-
   workflow_dispatch:
 
-concurrency:
-  group: crawler-${{ github.ref_name }}
-  cancel-in-progress: true
+# concurrency:
+#   group: crawler-${{ github.ref_name }}
+#   cancel-in-progress: true
 
 permissions:
   contents: read
